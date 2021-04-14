@@ -1,0 +1,117 @@
+---
+title: "L03 Feauture Engineering Revisited"
+subtitle: "Data Science III (STAT 301-3)"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    highlight: "tango"
+---
+
+## Overview
+
+The main goal of this lab is to improve and expand feature engineering skills. We also want to develop a better sense of how to handle missing data.
+
+## Dataset
+
+We will be utilizing `titanic.csv` dataset contained in the **data** subdirectory. `titanic_codebook.html` provides a quick overview of the data which is where students should begin.
+
+## Exercises
+
+### Exercise 1
+
+When choosing and deploying feature engineering steps what should an analyst consider first? Or more broadly stated, what is the purpose of feature engineering? 
+
+<br>
+
+### Exercise 2
+
+When is it necessary to dummy encode factor variables? Provide examples of when it is necessary and when it is unnecessary.
+
+<br>
+
+### Exercise 3
+
+When dummy encoding a factor variable with a large number of levels/categories, what are the two filtering steps we could take to handle rarely occurring levels/categories? When should they be applied within our feature engineering recipe? (Should identify the `step_` functions you would use to deploy these methods).
+
+If we decided that we wanted to avoid filtering our rarely occurring levels/categories, then what is one option/alternative that we have?
+
+<br>
+
+### Exercise 4
+
+Name two model types that are sensitive to skewed predictors or predictors with extreme/unusual values (i.e. outliers). 
+
+The Box-Cox (`step_BoxCox()`) and Yeo-Johnson (`step_YeoJohnson()`) transformations are useful for handling skewness. When must you pick the Yeo-Johnson transformation over the Box-Cox transformation to handle skewness?
+
+Are there any model types that are immune to such issues with their predictors? If so, name one.
+
+<br>
+
+### Exercise 5
+
+When is a standardization process (think scaling) essential? Provide an example of when it is essential.
+
+<br>
+
+### Execise 6
+
+Name two model types that are adversely affected by **highly** correlated predictor variables. Name two methods that could be used to help with this issue --- identify their `step_` functions.
+
+<br>
+
+### Exercise 7
+
+Why is it essential that we address missing data? And, what is the first and most important question when encountering missing data?
+
+<br>
+
+### Exercise 8
+
+One framework to view missing values is through the lens of the mechanisms of missing data. What are three common mechanisms for missing data? Also provide a short description of each. 
+
+<br>
+
+### Exercise 9
+
+Three methods to deal with missingness are deletion of data, encoding missingness, and imputation. 
+
+When using deletion of data, we may face of the choice of deleting predictors (columns) or samples/observations (rows). In general, which should we identify first for removal, predicors or samples with high degree of missingness? Explain.
+
+When can we using the method of encoding missingness?
+
+Name at least three imputation methods you can use in `tidymodels`? Identify their `step_` function. Above what *"line-of-dignity"* threshold is too much data imputation for a predictor/column?
+
+<br>
+
+### Exercise 10 
+
+We plan to train a few random forest model for `survived` in the `titanic.csv` dataset. Begin by setting up the initial split and folds (5 fold, 3 repeats) --- see `setup_titanic.R`). 
+
+We should explore missingness first. Using the `naniar` package, explore the nature of missingness in the training data. Use both graphics and summary tables. Display this work.
+
+How would you suggest we handle the missingness that is present?
+
+<br>
+
+### Exercise 11
+
+From Exercise 10, it should be clear that one variable should just be deleted due to its missingness and we could use imputation methods for the others. Other varibles to remove should be id variables like `name` and `passenger_id`. We could also remove `ticket`.
+
+Train at least 2 random forest models using different imputation methods for each (only change the imputation steps between the two). Does one of your imputation methods result in a significantly better model?
+
+<br>
+
+## Challenge
+**Not Required**
+
+Take your elastic net tuning work on the wildfires data from the previous lab and add a principal component step (could try kernal pca as well) in order to reduce the dimensionality after adding all interactions. Try tuning the number of components as well. 
+
+Does adding a dimension reduction step improve the classification?
+
+Consider trying partial least squares and/or independent component analysis too.
+
+## Github Repo Link
+
+[YOUR GITHUB URL](YOUR GITHUB URL){target="_blank"}
+
