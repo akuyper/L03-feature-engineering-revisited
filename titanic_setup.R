@@ -9,7 +9,7 @@ set.seed(3013)
 titanic <- read_csv("data/titanic.csv") %>%
   janitor::clean_names() %>%
   mutate(
-    survived = factor(survived, levels = c("yes", "no")),
+    survived = factor(survived, levels = c("Yes", "No")),
     pclass = factor(pclass)
   )
 
