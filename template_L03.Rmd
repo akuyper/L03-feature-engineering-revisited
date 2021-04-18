@@ -76,7 +76,7 @@ One framework to view missing values is through the lens of the mechanisms of mi
 
 Three methods to deal with missingness are deletion of data, encoding missingness, and imputation. 
 
-When using deletion of data, we may face of the choice of deleting predictors (columns) or samples/observations (rows). In general, which should we identify first for removal, predicors or samples with high degree of missingness? Explain.
+When using deletion of data, we may face the choice of deleting predictors (columns) or samples/observations (rows). In general, which should we identify first for removal, predicors or samples with high degree of missingness? Explain.
 
 When can we using the method of encoding missingness?
 
