@@ -1,4 +1,4 @@
-# {MODEL TYPE] tuning ----
+# {MODEL TYPE} tuning ----
 
 # Load package(s) ----
 library(tidyverse)
@@ -26,7 +26,14 @@ tic("MODEL TYPE")
 toc(log = TRUE)
 
 # save runtime info
-YOUR_NAME_CHOICE <- tic.log(format = TRUE)
+time_log <- tic.log(format = FALSE)
+
+YOUR_NAME_CHOICE <- tibble(
+  model = time_log[[1]]$msg,
+  start_time = time_log[[1]]$tic,
+  end_time = time_log[[1]]$toc,
+  runtime = end_time - start_time
+)
 
 # Write out results & workflow
 
