@@ -1,4 +1,4 @@
-# Load package(s)
+# Load package(s) ----
 library(tidymodels)
 library(tidyverse)
 
@@ -8,7 +8,7 @@ tidymodels_prefer()
 # Seed
 set.seed(3013)
 
-## load data
+## load data ----
 titanic <- read_csv("data/titanic.csv") %>%
   janitor::clean_names() %>%
   mutate(

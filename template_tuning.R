@@ -14,7 +14,7 @@ library(tictoc)
 # set-up tuning grid ----
 
 
-# define tuning gridgrid
+# define tuning grid
 
 
 # workflow ----

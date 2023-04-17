@@ -4,7 +4,7 @@ The main goal of this lab is to improve and expand feature engineering skills. W
 
 ## Instructions
 
-After creating a github repo and connecting it to RStudio, students should work through the instructions provided in `LO3_feature_engineering_revisited.html`. A template is provided (rename as lastname_firstname_L03.Rmd).
+After creating a GitHub repo and connecting it to RStudio, students should work through the instructions provided in `LO3_feature_engineering_revisited.html`. A template is provided (rename as lastname_firstname_L03.Rmd).
 
-Students will need to submit their knitted html file which should contain a link to their github repo. See canvas for submission details.
+Students will need to submit their rendered html file which should contain a link to their github repo. See canvas for submission details.
 
